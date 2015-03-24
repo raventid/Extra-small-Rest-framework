@@ -1,9 +1,11 @@
-Extra-small-Rest-framework
+extra_small_rest_framewfork
 ==========================
-Важные файлы:
+Basic web-app kernel to serve http requestes and create responses written in vanilla PHP.
+
+Main logic's in these files:
 
 server.php
 request.php
 response.php
 
-В нагрузку приложил класс для работы с базой данных.
+.
