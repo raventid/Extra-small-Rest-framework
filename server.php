@@ -1,7 +1,6 @@
 <?php
 
-//Includes
-
+//MB better use requires?
 include 'request.php';
 include 'response.php';
 include 'safemysql.class.php';
