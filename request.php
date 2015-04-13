@@ -31,6 +31,8 @@ class Request
      */
      private $requestBody = Null;
 
+
+//@todo too complex constructor
     /**
      * Constructor: __construct
      * Assemble and pre-process the data
