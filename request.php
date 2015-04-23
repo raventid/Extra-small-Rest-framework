@@ -80,6 +80,7 @@ class Request
     public function isEndpointExists() 
     {
         //Very bad and ugly way, it should be changed
+        //request should not is endpoint exists
         if ($this->endpoint != 'books') 
         {
             // Here we can add some code to test if appropriate tables in DB or API methods exists
