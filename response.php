@@ -305,7 +305,7 @@ class Response
         return $content;
     }
 /**
-* Transform response body into appropriate format
+* Transform response body into appropriate format *
 */
     private function formatNeeded($content)
     {
