@@ -1,6 +1,6 @@
 <?php
 
-//MB better use requires?
+//MB better use requires or even autoloading
 include 'request.php';
 include 'response.php';
 include 'safemysql.class.php';
