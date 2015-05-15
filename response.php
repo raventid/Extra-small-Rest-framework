@@ -288,7 +288,6 @@ class Response
 */
     public function __toString()
     {
-        // Get body content to return
         try {
             $content = $this->formatNeeded($this->content());
         } catch(\Exception $e) {
