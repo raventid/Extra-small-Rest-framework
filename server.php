@@ -8,8 +8,8 @@ include 'safemysql.class.php';
 include '../config.php';
 
 
-//Options for DB conection
-
+/**Options for DB conection
+*/
 $opts = array(
     'host' => $Host,
     'user' => $User,
