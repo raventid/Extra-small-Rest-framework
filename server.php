@@ -35,10 +35,9 @@ try {
     exit;
 }
 
-//Additional vars
-
+/**Id of entity
 $id = array_shift($request->getArgs());
-
+*/
 
 //add better abstraction with pdo wrapper
 
