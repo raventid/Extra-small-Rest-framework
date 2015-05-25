@@ -19,7 +19,8 @@ $opts = array(
 );
 
 
-//Objects
+/**Objects
+*/
 $request = new Request($_REQUEST['request']);
 $db = new SafeMysql($opts);
 $response = new Response();
