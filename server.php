@@ -18,9 +18,6 @@ $opts = array(
     'charset' => $Charset
 );
 
-
-/**Objects
-*/
 $request = new Request($_REQUEST['request']);
 $db = new SafeMysql($opts);
 $response = new Response();
