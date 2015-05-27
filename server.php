@@ -36,8 +36,6 @@ try {
 $id = array_shift($request->getArgs());
 */
 
-//add better abstraction with pdo wrapper
-
 //*************************************************************************MAIN LOGIC**********************************************************************************
 
 switch ($request->getRequestMethod()){
