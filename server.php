@@ -76,7 +76,7 @@ case "POST": {
  case "PUT": {
 
     $updates = $request->getRequestBody();
-    
+    //book??
     $query_result = $db->getRow("SELECT * FROM ?n WHERE book_id=?i",$request->getEndpoint(), $id);
 
     if ($query_result === null){
