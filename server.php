@@ -29,7 +29,7 @@ try {
     $response->contentType('application/json');
     $response->status('400');
     $response->send();
-    exit;
+    exit;//stop execution here, mb use finally
 }
 
 /**Id of entity*/
