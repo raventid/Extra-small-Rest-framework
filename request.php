@@ -87,6 +87,11 @@ class Request
             throw new Exception("Endpoint $this->endpoint not found");
         }
     }
+    
+    public function getRecord()
+    {
+        //book or anythig else
+    }
 
     /**
     *Get the endpoint
