@@ -49,7 +49,7 @@ class Request
        // var_dump($this->verb);
 
         $this->method = $_SERVER['REQUEST_METHOD'];
-        //var_dump($this->method);
+        //var_dump($this->method); very verbose
         if ($this->method == 'POST' && array_key_exists('HTTP_X_HTTP_METHOD', $_SERVER)) {
             if ($_SERVER['HTTP_X_HTTP_METHOD'] == 'DELETE') {
                 $this->method = 'DELETE';
