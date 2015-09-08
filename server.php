@@ -48,6 +48,7 @@ case "GET": {
         }
     }
     else {
+        //where book_id??? wtf???11
         $query_result = $db->getRow("SELECT * FROM ?n WHERE book_id=?i",$request->getEndpoint(), $id);
     } 
 
