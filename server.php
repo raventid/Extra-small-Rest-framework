@@ -26,6 +26,7 @@ try {
     $request->isEndpointExists();
 } catch (Exception $e) { // not sure about handling this mistake and mistake status
     $response->content(Array('error' => $e->getMessage()));
+    //some predefined types for content
     $response->contentType('application/json');
     $response->status('400');
     $response->send();
