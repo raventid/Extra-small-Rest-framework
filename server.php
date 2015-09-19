@@ -1,6 +1,6 @@
 <?php
 
-/**MB better use requires or even autoloading
+/**autoloader
  */
 include 'request.php';
 include 'response.php';
