@@ -1,5 +1,11 @@
 <?php
 
+require_once("db.php");
+require_once("text_file.php");
+require_once("question.php");
+
+use \Base\Question;
+
 trait SimpleXMLManager {
   public function openPage($url){
       if(!$page = file_get_contents($url))
@@ -106,7 +112,7 @@ class Aiopass4sure implements Crowler {
     }
 
     public function returnQuestions(){
-      $a = 24;
+      $a = 26;
       $questions = [];
       while($this->next_page_exists($this::URL . $a) && $a < 28){
         $simple_xml = $this->openPage($this::URL . $a);
@@ -133,22 +139,16 @@ class WebParser {
     } 
 }
 
-class Question {
-  public $text = '';
-  public $answers = [];
-  public $correct_answers = [];
-  public function __construct($_text = '', $_answers = array(), $_correct_answers = array()){
-    $text = $_text;
-    $answers = $_answers;
-    $correct_answers = $_correct_answers; 
-  }
-}
-
-require_once("db.php");
-require_once("text_file.php");
-
 $container = new DB\TextFile\TextBase();
 $db = new DB\DB($container);
-serialize($db);
+
+$crowler = new Aiopass4sure();
+
+echo str_repeat(PHP_EOL,3);
+$db->save_all($crowler->returnQuestions());
+
+echo str_repeat(PHP_EOL,3);
+$arr = $db->load_all();
+print_r($arr);
 // $parser = new WebParser(new Aiopass4sure());
 // $parser->printQuestions();
