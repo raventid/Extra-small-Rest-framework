@@ -69,6 +69,9 @@ class Aiopass4sure implements Crowler {
           ->xpath('
           .//div[@class="col-md-10 col-lg-10 col-sm-12 col-xs-12 pull-right"]/
           div[@class="content"]')[0];
+      if(!$question_text){
+        return;
+      }
       $question_content = $question_text->xpath('.//p');
     
       $question = new Question();
@@ -112,7 +115,7 @@ class Aiopass4sure implements Crowler {
     }
 
     public function returnQuestions(){
-      $a = 26;
+      $a = 1;
       $questions = [];
       while($this->next_page_exists($this::URL . $a) && $a < 28){
         $simple_xml = $this->openPage($this::URL . $a);
@@ -139,16 +142,12 @@ class WebParser {
     } 
 }
 
-$container = new DB\TextFile\TextBase();
-$db = new DB\DB($container);
+// $container = new DB\TextFile\TextBase();
+// $db = new DB\DB($container);
+// 
+// $crowler = new Aiopass4sure();
+// 
+// $db->save_all($crowler->returnQuestions());
 
-$crowler = new Aiopass4sure();
-
-echo str_repeat(PHP_EOL,3);
-$db->save_all($crowler->returnQuestions());
-
-echo str_repeat(PHP_EOL,3);
-$arr = $db->load_all();
-print_r($arr);
 // $parser = new WebParser(new Aiopass4sure());
 // $parser->printQuestions();
